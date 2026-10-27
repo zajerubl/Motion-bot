@@ -12,5 +12,12 @@
     "media_type": "video",
     "caption": "Анимированный рилс",
     "order_index": 1
+  },
+  {
+    "id": 3,
+    "file_id": "BAACAgQAAxkBAAM5auCbq8pUI3YDoaRavN4e7ZqfhmwAAo0dAAIwrwABUw2CcjSY82D2PQQ",
+    "media_type": "video",
+    "caption": "Рассказывающий ролик, анимация",
+    "order_index": 2
   }
 ]

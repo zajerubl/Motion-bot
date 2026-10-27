@@ -5,5 +5,12 @@
     "media_type": "video",
     "caption": "Анимированный ролик продвижение телеграм",
     "order_index": 0
+  },
+  {
+    "id": 2,
+    "file_id": "BAACAgQAAxkBAAMhauCWmLbJaG3Hc5pvm0EdwRymp50AAocdAAIwrwABU1FOt9OJBkYLPQQ",
+    "media_type": "video",
+    "caption": "Анимированный рилс",
+    "order_index": 1
   }
 ]

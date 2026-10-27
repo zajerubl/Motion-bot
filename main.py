@@ -17,7 +17,22 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
     stream=sys.stdout
 )
-logger = logging.getLogger(__name__)
+import os
+from aiohttp import web
+
+async def handle_ping(request):
+    return web.Response(text="Bot is alive and running 24/7!")
+
+async def start_web_server():
+    app = web.Application()
+    app.router.add_get("/", handle_ping)
+    app.router.add_get("/health", handle_ping)
+    runner = web.AppRunner(app)
+    await runner.setup()
+    port = int(os.getenv("PORT", 8080))
+    site = web.TCPSite(runner, "0.0.0.0", port)
+    await site.start()
+    logger.info(f"Health-check web server started on port {port}")
 
 async def main():
     if not config.BOT_TOKEN:
@@ -26,6 +41,9 @@ async def main():
 
     logger.info("Initializing database...")
     await database.init_db()
+
+    # Start dummy web server for Render / cloud health checks
+    await start_web_server()
 
     bot = Bot(
         token=config.BOT_TOKEN,

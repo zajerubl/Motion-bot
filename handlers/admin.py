@@ -26,7 +26,11 @@ async def cb_admin_panel(callback: CallbackQuery, state: FSMContext):
         await callback.answer("⛔️ У вас нет доступа к этому разделу.", show_alert=True)
         return
 
-    await callback.answer()
+    try:
+        await callback.answer()
+    except Exception:
+        pass
+
     users_cnt = await database.get_users_count()
     works_cnt = await database.get_works_count()
 
@@ -40,6 +44,10 @@ async def cb_admin_panel(callback: CallbackQuery, state: FSMContext):
     try:
         await callback.message.edit_text(text, parse_mode="HTML", reply_markup=get_admin_keyboard())
     except Exception:
+        try:
+            await callback.message.delete()
+        except Exception:
+            pass
         await callback.message.answer(text, parse_mode="HTML", reply_markup=get_admin_keyboard())
 
 @router.callback_query(F.data == "admin_cancel")
@@ -166,6 +174,10 @@ async def cb_admin_list(callback: CallbackQuery):
     try:
         await callback.message.edit_text(text, parse_mode="HTML", reply_markup=InlineKeyboardMarkup(inline_keyboard=buttons))
     except Exception:
+        try:
+            await callback.message.delete()
+        except Exception:
+            pass
         await callback.message.answer(text, parse_mode="HTML", reply_markup=InlineKeyboardMarkup(inline_keyboard=buttons))
 
 @router.callback_query(F.data.startswith("admin_order_work:"))
@@ -173,11 +185,18 @@ async def cb_admin_order_work(callback: CallbackQuery):
     if not is_admin(callback.from_user):
         return
 
-    await callback.answer()
+    try:
+        await callback.answer()
+    except Exception:
+        pass
+
     work_id = int(callback.data.split(":")[1])
     work = await database.get_work_by_id(work_id)
     if not work:
-        await callback.answer("Работа не найдена.", show_alert=True)
+        try:
+            await callback.answer("Работа не найдена.", show_alert=True)
+        except Exception:
+            pass
         return
 
     works = await database.get_all_works()
@@ -196,6 +215,10 @@ async def cb_admin_order_work(callback: CallbackQuery):
     try:
         await callback.message.edit_text(text, parse_mode="HTML", reply_markup=kb)
     except Exception:
+        try:
+            await callback.message.delete()
+        except Exception:
+            pass
         await callback.message.answer(text, parse_mode="HTML", reply_markup=kb)
 
 @router.callback_query(F.data.startswith("order_up:"))

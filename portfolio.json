@@ -40,12 +40,5 @@
     "media_type": "video",
     "caption": "Агентство Олимп",
     "order_index": 5
-  },
-  {
-    "id": 7,
-    "file_id": "BAACAgQAAxkBAAMhauCWmLbJaG3Hc5pvm0EdwRymp50AAocdAAIwrwABU1FOt9OJBkYLPQQ",
-    "media_type": "video",
-    "caption": "Анимированный рилс",
-    "order_index": 6
   }
 ]

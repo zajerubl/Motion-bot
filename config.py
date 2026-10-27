@@ -16,6 +16,8 @@ class Config:
     BOT_TOKEN: str = os.getenv("BOT_TOKEN", "").strip().strip('"').strip("'")
     ADMIN_ID: int = get_int_env("ADMIN_ID", 0)
     CONTACT_USERNAME: str = os.getenv("CONTACT_USERNAME", "shantrapaev").replace("@", "").strip()
+    GITHUB_TOKEN: str = os.getenv("GITHUB_TOKEN", "").strip()
+    GITHUB_REPO: str = os.getenv("GITHUB_REPO", "zajerubl/Motion-bot").strip()
 
 config = Config()
 

@@ -17,6 +17,8 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
     stream=sys.stdout
 )
+logger = logging.getLogger(__name__)
+
 import os
 from aiohttp import web
 

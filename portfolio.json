@@ -19,5 +19,12 @@
     "media_type": "video",
     "caption": "Рассказывающий ролик, анимация",
     "order_index": 2
+  },
+  {
+    "id": 4,
+    "file_id": "BAACAgQAAxkBAAM-auCcBilcuryU2o4PiDiuj2JPLicAAo4dAAIwrwABUyQQTYQQsLg8PQQ",
+    "media_type": "video",
+    "caption": "Ролик строительство",
+    "order_index": 3
   }
 ]

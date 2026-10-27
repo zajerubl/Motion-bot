@@ -5,7 +5,7 @@ from aiogram.types import Message, CallbackQuery, FSInputFile, InputMediaPhoto
 from aiogram.filters import CommandStart
 from aiogram.exceptions import TelegramBadRequest
 
-from config import config
+from config import config, is_admin
 import database
 from keyboards import (
     get_main_menu_keyboard,
@@ -85,24 +85,24 @@ async def cmd_start(message: Message):
     first_name = message.from_user.first_name
     
     await database.add_user(user_id, username, first_name)
-    is_admin = (user_id == config.ADMIN_ID)
+    user_is_admin = is_admin(message.from_user)
     
     await clean_and_send_photo(
         call_or_msg=message,
         photo_path=MAIN_MENU_IMG,
         caption=MAIN_TEXT,
-        reply_markup=get_main_menu_keyboard(is_admin)
+        reply_markup=get_main_menu_keyboard(user_is_admin)
     )
 
 @router.callback_query(F.data == "main_menu")
 async def cb_main_menu(callback: CallbackQuery):
     await callback.answer()
-    is_admin = (callback.from_user.id == config.ADMIN_ID)
+    user_is_admin = is_admin(callback.from_user)
     await clean_and_send_photo(
         call_or_msg=callback,
         photo_path=MAIN_MENU_IMG,
         caption=MAIN_TEXT,
-        reply_markup=get_main_menu_keyboard(is_admin)
+        reply_markup=get_main_menu_keyboard(user_is_admin)
     )
 
 @router.callback_query(F.data == "about")
@@ -132,7 +132,7 @@ async def cb_portfolio(callback: CallbackQuery):
     index = int(parts[1]) if len(parts) > 1 else 0
     
     total = await database.get_works_count()
-    is_admin = (callback.from_user.id == config.ADMIN_ID)
+    user_is_admin = is_admin(callback.from_user)
     
     chat_id = callback.message.chat.id
     msg_id = callback.message.message_id
@@ -147,7 +147,7 @@ async def cb_portfolio(callback: CallbackQuery):
             call_or_msg=callback,
             photo_path=MAIN_MENU_IMG,
             caption=empty_text,
-            reply_markup=get_empty_portfolio_keyboard(is_admin)
+            reply_markup=get_empty_portfolio_keyboard(user_is_admin)
         )
         return
 
@@ -165,7 +165,7 @@ async def cb_portfolio(callback: CallbackQuery):
         current_index=index,
         total_count=total,
         work_id=work["id"],
-        is_admin=is_admin
+        is_admin=user_is_admin
     )
     
     # Try deleting previous message

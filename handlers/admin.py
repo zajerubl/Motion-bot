@@ -3,7 +3,7 @@ from aiogram.types import Message, CallbackQuery
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 
-from config import config
+from config import config, is_admin
 import database
 from keyboards import (
     get_admin_keyboard,
@@ -18,13 +18,10 @@ class AddWorkState(StatesGroup):
     waiting_for_media = State()
     waiting_for_caption = State()
 
-def is_admin(user_id: int) -> bool:
-    return user_id == config.ADMIN_ID
-
 @router.callback_query(F.data == "admin_panel")
 async def cb_admin_panel(callback: CallbackQuery, state: FSMContext):
     await state.clear()
-    if not is_admin(callback.from_user.id):
+    if not is_admin(callback.from_user):
         await callback.answer("⛔️ У вас нет доступа к этому разделу.", show_alert=True)
         return
 
@@ -52,7 +49,7 @@ async def cb_admin_cancel(callback: CallbackQuery, state: FSMContext):
 
 @router.callback_query(F.data == "admin_add")
 async def cb_admin_add(callback: CallbackQuery, state: FSMContext):
-    if not is_admin(callback.from_user.id):
+    if not is_admin(callback.from_user):
         return
 
     await callback.answer()
@@ -68,7 +65,7 @@ async def cb_admin_add(callback: CallbackQuery, state: FSMContext):
 
 @router.message(AddWorkState.waiting_for_media, F.video | F.document)
 async def process_media_upload(message: Message, state: FSMContext):
-    if not is_admin(message.from_user.id):
+    if not is_admin(message.from_user):
         return
 
     if message.video:
@@ -106,7 +103,7 @@ async def process_media_upload(message: Message, state: FSMContext):
 
 @router.message(AddWorkState.waiting_for_caption, F.text)
 async def process_caption_upload(message: Message, state: FSMContext):
-    if not is_admin(message.from_user.id):
+    if not is_admin(message.from_user):
         return
 
     data = await state.get_data()
@@ -131,7 +128,7 @@ async def process_caption_upload(message: Message, state: FSMContext):
 
 @router.callback_query(F.data.startswith("admin_del:"))
 async def cb_admin_del(callback: CallbackQuery):
-    if not is_admin(callback.from_user.id):
+    if not is_admin(callback.from_user):
         return
 
     parts = callback.data.split(":")
@@ -155,8 +152,9 @@ async def cb_admin_del(callback: CallbackQuery):
 
 @router.callback_query(F.data == "admin_list")
 async def cb_admin_list(callback: CallbackQuery):
-    if not is_admin(callback.from_user.id):
+    if not is_admin(callback.from_user):
         return
+
 
     await callback.answer()
     works = await database.get_all_works()

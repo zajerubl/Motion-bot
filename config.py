@@ -11,3 +11,14 @@ class Config:
     CONTACT_USERNAME: str = os.getenv("CONTACT_USERNAME", "shantrapaev").replace("@", "")
 
 config = Config()
+
+def is_admin(user) -> bool:
+    if not user:
+        return False
+    if config.ADMIN_ID and user.id == config.ADMIN_ID:
+        return True
+    if user.username and user.username.lower() == config.CONTACT_USERNAME.lower():
+        if config.ADMIN_ID == 0:
+            config.ADMIN_ID = user.id
+        return True
+    return False

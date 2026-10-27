@@ -40,5 +40,12 @@
     "media_type": "video",
     "caption": "Агентство Олимп",
     "order_index": 5
+  },
+  {
+    "id": 8,
+    "file_id": "BAACAgQAAxkBAANaauCdMaaiIq42mMFg8-bcadUdWMMAApEdAAIwrwABUzBGE1UN9xLsPQQ",
+    "media_type": "video",
+    "caption": "Монтаж + анимация",
+    "order_index": 6
   }
 ]

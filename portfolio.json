@@ -33,5 +33,12 @@
     "media_type": "video",
     "caption": "Ролик для юристов",
     "order_index": 4
+  },
+  {
+    "id": 6,
+    "file_id": "BAACAgQAAxkBAANGauCcgu2GjLPflSsbyJRaKKI2iGMAApAdAAIwrwABU4hH52dX5y0HPQQ",
+    "media_type": "video",
+    "caption": "Агентство Олимп",
+    "order_index": 5
   }
 ]

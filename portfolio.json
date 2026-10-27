@@ -26,5 +26,12 @@
     "media_type": "video",
     "caption": "Ролик строительство",
     "order_index": 3
+  },
+  {
+    "id": 5,
+    "file_id": "BAACAgQAAxkBAANBauCcReqaUU1F0eNyQ6MV3CDtJlQAAo8dAAIwrwABU9ryrizQzjYNPQQ",
+    "media_type": "video",
+    "caption": "Ролик для юристов",
+    "order_index": 4
   }
 ]

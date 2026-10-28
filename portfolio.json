@@ -1,37 +1,37 @@
 [
   {
+    "id": 8,
+    "file_id": "BAACAgQAAxkBAANaauCdMaaiIq42mMFg8-bcadUdWMMAApEdAAIwrwABUzBGE1UN9xLsPQQ",
+    "media_type": "video",
+    "caption": "Монтаж + анимация",
+    "order_index": 0
+  },
+  {
     "id": 1,
     "file_id": "BAACAgQAAxkBAAMzauCbYYz0a8vkG7GUJB4-RH1npgkAAowdAAIwrwABUyIEV00DFjiBPQQ",
     "media_type": "video",
     "caption": "Анимированный ролик продвижение телеграм",
-    "order_index": 0
+    "order_index": 1
   },
   {
     "id": 2,
     "file_id": "BAACAgQAAxkBAAMhauCWmLbJaG3Hc5pvm0EdwRymp50AAocdAAIwrwABU1FOt9OJBkYLPQQ",
     "media_type": "video",
     "caption": "Анимированный рилс",
-    "order_index": 1
+    "order_index": 2
   },
   {
     "id": 4,
     "file_id": "BAACAgQAAxkBAAM-auCcBilcuryU2o4PiDiuj2JPLicAAo4dAAIwrwABUyQQTYQQsLg8PQQ",
     "media_type": "video",
     "caption": "Ролик строительство",
-    "order_index": 2
+    "order_index": 3
   },
   {
     "id": 5,
     "file_id": "BAACAgQAAxkBAANBauCcReqaUU1F0eNyQ6MV3CDtJlQAAo8dAAIwrwABU9ryrizQzjYNPQQ",
     "media_type": "video",
     "caption": "Ролик для юристов",
-    "order_index": 3
-  },
-  {
-    "id": 8,
-    "file_id": "BAACAgQAAxkBAANaauCdMaaiIq42mMFg8-bcadUdWMMAApEdAAIwrwABUzBGE1UN9xLsPQQ",
-    "media_type": "video",
-    "caption": "Монтаж + анимация",
     "order_index": 4
   },
   {

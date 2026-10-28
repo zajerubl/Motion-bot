@@ -40,5 +40,12 @@
     "media_type": "video",
     "caption": "Рассказывающий ролик, анимация",
     "order_index": 5
+  },
+  {
+    "id": 9,
+    "file_id": "BAACAgQAAxkBAAOTauHk8BmbeYHdaxklTiOLBa_xzDYAAj8kAALgtBBT83g4Wvr28lk9BA",
+    "media_type": "video",
+    "caption": "Анимация интерфейса",
+    "order_index": 6
   }
 ]

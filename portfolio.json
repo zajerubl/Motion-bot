@@ -47,5 +47,12 @@
     "media_type": "video",
     "caption": "Анимация интерфейса",
     "order_index": 6
+  },
+  {
+    "id": 10,
+    "file_id": "BAACAgQAAxkBAAOYauHlMgqT8BbLTbQe1asrbfC05N8AAkQkAALgtBBT5t249e4rqXE9BA",
+    "media_type": "video",
+    "caption": "Мотивационный ролик",
+    "order_index": 7
   }
 ]

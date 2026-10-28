@@ -28,24 +28,17 @@
     "order_index": 3
   },
   {
-    "id": 6,
-    "file_id": "BAACAgQAAxkBAANGauCcgu2GjLPflSsbyJRaKKI2iGMAApAdAAIwrwABU4hH52dX5y0HPQQ",
-    "media_type": "video",
-    "caption": "Агентство Олимп",
-    "order_index": 4
-  },
-  {
     "id": 8,
     "file_id": "BAACAgQAAxkBAANaauCdMaaiIq42mMFg8-bcadUdWMMAApEdAAIwrwABUzBGE1UN9xLsPQQ",
     "media_type": "video",
     "caption": "Монтаж + анимация",
-    "order_index": 5
+    "order_index": 4
   },
   {
     "id": 3,
     "file_id": "BAACAgQAAxkBAAM5auCbq8pUI3YDoaRavN4e7ZqfhmwAAo0dAAIwrwABUw2CcjSY82D2PQQ",
     "media_type": "video",
     "caption": "Рассказывающий ролик, анимация",
-    "order_index": 6
+    "order_index": 5
   }
 ]

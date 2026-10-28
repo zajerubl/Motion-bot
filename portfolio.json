@@ -14,38 +14,38 @@
     "order_index": 1
   },
   {
-    "id": 3,
-    "file_id": "BAACAgQAAxkBAAM5auCbq8pUI3YDoaRavN4e7ZqfhmwAAo0dAAIwrwABUw2CcjSY82D2PQQ",
-    "media_type": "video",
-    "caption": "Рассказывающий ролик, анимация",
-    "order_index": 2
-  },
-  {
     "id": 4,
     "file_id": "BAACAgQAAxkBAAM-auCcBilcuryU2o4PiDiuj2JPLicAAo4dAAIwrwABUyQQTYQQsLg8PQQ",
     "media_type": "video",
     "caption": "Ролик строительство",
-    "order_index": 3
+    "order_index": 2
   },
   {
     "id": 5,
     "file_id": "BAACAgQAAxkBAANBauCcReqaUU1F0eNyQ6MV3CDtJlQAAo8dAAIwrwABU9ryrizQzjYNPQQ",
     "media_type": "video",
     "caption": "Ролик для юристов",
-    "order_index": 4
+    "order_index": 3
   },
   {
     "id": 6,
     "file_id": "BAACAgQAAxkBAANGauCcgu2GjLPflSsbyJRaKKI2iGMAApAdAAIwrwABU4hH52dX5y0HPQQ",
     "media_type": "video",
     "caption": "Агентство Олимп",
-    "order_index": 5
+    "order_index": 4
   },
   {
     "id": 8,
     "file_id": "BAACAgQAAxkBAANaauCdMaaiIq42mMFg8-bcadUdWMMAApEdAAIwrwABUzBGE1UN9xLsPQQ",
     "media_type": "video",
     "caption": "Монтаж + анимация",
+    "order_index": 5
+  },
+  {
+    "id": 3,
+    "file_id": "BAACAgQAAxkBAAM5auCbq8pUI3YDoaRavN4e7ZqfhmwAAo0dAAIwrwABUw2CcjSY82D2PQQ",
+    "media_type": "video",
+    "caption": "Рассказывающий ролик, анимация",
     "order_index": 6
   }
 ]

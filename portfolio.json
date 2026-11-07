@@ -54,5 +54,12 @@
     "media_type": "video",
     "caption": "Мотивационный ролик",
     "order_index": 7
+  },
+  {
+    "id": 11,
+    "file_id": "BAACAgQAAxkBAAIBBWrvSUf15JDZQzubBK7g05cl837SAALsHgADY3BTZUz79_SpyZA9BA",
+    "media_type": "video",
+    "caption": "Рилс для недвижки",
+    "order_index": 8
   }
 ]

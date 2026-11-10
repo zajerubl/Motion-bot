@@ -49,17 +49,17 @@
     "order_index": 6
   },
   {
-    "id": 9,
-    "file_id": "BAACAgQAAxkBAAOTauHk8BmbeYHdaxklTiOLBa_xzDYAAj8kAALgtBBT83g4Wvr28lk9BA",
-    "media_type": "video",
-    "caption": "Анимация интерфейса",
-    "order_index": 7
-  },
-  {
     "id": 12,
     "file_id": "BAACAgQAAxkBAAIBFmry5E4WosYRP2yz3yDarV-6qWCZAAI3HwACeUqYU7244oVdTAABlz0E",
     "media_type": "video",
     "caption": "Рилс недвижимости",
+    "order_index": 7
+  },
+  {
+    "id": 9,
+    "file_id": "BAACAgQAAxkBAAOTauHk8BmbeYHdaxklTiOLBa_xzDYAAj8kAALgtBBT83g4Wvr28lk9BA",
+    "media_type": "video",
+    "caption": "Анимация интерфейса",
     "order_index": 8
   },
   {

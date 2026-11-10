@@ -56,17 +56,17 @@
     "order_index": 7
   },
   {
-    "id": 10,
-    "file_id": "BAACAgQAAxkBAAOYauHlMgqT8BbLTbQe1asrbfC05N8AAkQkAALgtBBT5t249e4rqXE9BA",
-    "media_type": "video",
-    "caption": "Мотивационный ролик",
-    "order_index": 8
-  },
-  {
     "id": 12,
     "file_id": "BAACAgQAAxkBAAIBFmry5E4WosYRP2yz3yDarV-6qWCZAAI3HwACeUqYU7244oVdTAABlz0E",
     "media_type": "video",
     "caption": "Рилс недвижимости",
+    "order_index": 8
+  },
+  {
+    "id": 10,
+    "file_id": "BAACAgQAAxkBAAOYauHlMgqT8BbLTbQe1asrbfC05N8AAkQkAALgtBBT5t249e4rqXE9BA",
+    "media_type": "video",
+    "caption": "Мотивационный ролик",
     "order_index": 9
   }
 ]

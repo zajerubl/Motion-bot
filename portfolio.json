@@ -42,17 +42,17 @@
     "order_index": 5
   },
   {
-    "id": 3,
-    "file_id": "BAACAgQAAxkBAAM5auCbq8pUI3YDoaRavN4e7ZqfhmwAAo0dAAIwrwABUw2CcjSY82D2PQQ",
-    "media_type": "video",
-    "caption": "Рассказывающий ролик, анимация",
-    "order_index": 6
-  },
-  {
     "id": 12,
     "file_id": "BAACAgQAAxkBAAIBFmry5E4WosYRP2yz3yDarV-6qWCZAAI3HwACeUqYU7244oVdTAABlz0E",
     "media_type": "video",
     "caption": "Рилс недвижимости",
+    "order_index": 6
+  },
+  {
+    "id": 3,
+    "file_id": "BAACAgQAAxkBAAM5auCbq8pUI3YDoaRavN4e7ZqfhmwAAo0dAAIwrwABUw2CcjSY82D2PQQ",
+    "media_type": "video",
+    "caption": "Рассказывающий ролик, анимация",
     "order_index": 7
   },
   {
